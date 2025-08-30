@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saksham | Portfolio (Dark Pro)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Spotlight hover background for project cards */
+    .spotlight {
+      background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(99, 102, 241, 0.20), transparent 40%), rgba(17, 24, 39, 0.8);
+      transition: transform 300ms ease, box-shadow 300ms ease, background 200ms ease, border-color 300ms ease;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .spotlight:hover {
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25), 0 0 0 1px rgba(99, 102, 241, 0.35) inset;
+      border-color: rgba(99, 102, 241, 0.35);
+    }
+
+    .glass {
+      background: rgba(17, 24, 39, 0.6);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900 text-slate-100">
+
+  <!-- Navbar -->
+  <header class="fixed w-full top-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="#home"
+        class="text-2xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Saksham.dev</a>
+      <ul class="hidden md:flex space-x-8 text-slate-300">
+        <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
+        <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+        <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+        <li><a href="#stats" class="hover:text-indigo-400">Stats</a></li>
+        <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+      </ul>
+      <a href="#contact"
+        class="hidden md:inline-block px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold">Hire
+        Me</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home"
+    class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+    <!-- Subtle animated gradient blob -->
+    <div
+      class="pointer-events-none absolute -top-24 -right-24 w-[38rem] h-[38rem] rounded-full blur-3xl opacity-20 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 animate-pulse">
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4" data-aos="fade-up">Hi, I'm <span
+        class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Saksham</span>
+    </h1>
+    <p id="typing" class="text-lg md:text-2xl text-slate-300 h-8" data-aos="fade-up" data-aos-delay="100"></p>
+    <div class="mt-8 flex gap-4" data-aos="fade-up" data-aos-delay="200">
+      <a href="#projects" class="px-6 py-3 rounded-full bg-indigo-500 hover:bg-indigo-600 shadow-lg">See My Work</a>
+      <!-- <a href="resume.pdf" class="px-6 py-3 rounded-full bg-purple-500 hover:bg-purple-600 shadow-lg">Download Resume</a> -->
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 bg-slate-900/60 border-y border-white/10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div class="order-2 md:order-1" data-aos="fade-right">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+        <p class="text-slate-300 leading-relaxed">I’m a frontend developer focused on crafting modern, responsive, and
+          accessible web experiences using <span class="text-indigo-300">HTML</span>, <span
+            class="text-indigo-300">CSS</span>, <span class="text-indigo-300">JavaScript</span>, and <span
+            class="text-indigo-300">Tailwind CSS</span>. I enjoy clean UI, micro-interactions, and performance.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span
+            class="px-3 py-1 rounded-full text-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">HTML</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">CSS
+            / Tailwind</span>
+          <span
+            class="px-3 py-1 rounded-full text-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">JavaScript</span>
+          <span
+            class="px-3 py-1 rounded-full text-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">React
+            (learning)</span>
+        </div>
+      </div>
+      <div class="order-1 md:order-2" data-aos="fade-left">
+        <div class="glass rounded-2xl p-8 shadow-2xl border border-white/10">
+          <h3 class="text-xl font-semibold mb-3">What I do</h3>
+          <ul class="text-slate-300 space-y-2 list-disc list-inside">
+            <li>Responsive landing pages & portfolios</li>
+            <li>Clean component-based UI with Tailwind</li>
+            <li>Animations & micro-interactions</li>
+            <li>Website Redesingn / Mordernization</li>
+            <li>Figma / Canva to HTML Conversion</li>
+            <li>Website Fixes and Small Tracks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
+    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card template -->
+      <!-- Project 1 -->
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Landing Page</h3>
+          <p class="text-slate-300">It is a simple basic landing page demo</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://luxury-biscuit-417bc4.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/Landing-Page.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="100">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-amber-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Restaurant Landing page</h3>
+          <p class="text-slate-300">It is a Restaurant Demo website using tailwind.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://fastidious-babka-d87e86.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/Restaurant-landing-page.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-emerald-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Fitness/Gym</h3>
+          <p class="text-slate-300">It's a personal gym Demo website using tailwind.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://stellular-cocada-36bb7c.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/Fitness-Gym-.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 more placeholders -->
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-emerald-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">E-commerce</h3>
+          <p class="text-slate-300">It's a E-commerce website Demo using tailwind.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://astounding-pika-009ea3.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/E-commerce.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+     <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-emerald-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Startup "coming soon"/</h3>
+          <p class="text-slate-300">It's a Startup coming soon page using tailwind.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://bespoke-seahorse-9ae64f.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/Startup-coming-soon-.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-emerald-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Portfolio</h3>
+          <p class="text-slate-300">It's is demo simple and basic portfolio.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://nimble-beijinho-e6b9cc.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/my-portfolio.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="spotlight rounded-2xl overflow-hidden group relative" data-aos="zoom-in" data-aos-delay="200">
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-emerald-500/10">
+        </div>
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Currency Converter</h3>
+          <p class="text-slate-300">It's is Currency Converter using API.</p>
+          <div class="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition">
+            <a href="https://celadon-puppy-f4ab6f.netlify.app/" class="px-3 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white text-sm">Live Demo</a>
+            <a href="https://github.com/CodeBySaksaham/Currency-Converter.git"
+              class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm border border-white/10">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats"
+    class="py-20 px-6 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20 border-y border-white/10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up">
+        <h3 class="text-5xl font-bold">10+</h3>
+        <p class="mt-2 text-slate-300">Projects Completed</p>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-5xl font-bold">2+</h3>
+        <p class="mt-2 text-slate-300">Years Learning</p>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-5xl font-bold">100%</h3>
+        <p class="mt-2 text-slate-300">Responsive Designs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <!-- <section id="testimonials" class="py-20 px-6 bg-slate-900/60 border-b border-white/10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What People Say</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="glass p-6 rounded-2xl border border-white/10" data-aos="fade-up"><p class="text-slate-200">“Amazing work! The website was clean, modern, and delivered on time.”</p><h4 class="mt-4 font-semibold text-indigo-300">John Doe</h4></div>
+      <div class="glass p-6 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="150"><p class="text-slate-200">“Really creative developer. He pays attention to details and design.”</p><h4 class="mt-4 font-semibold text-indigo-300">Jane Smith</h4></div>
+    </div>
+  </section> -->
+
+  <!-- Contact -->
+  <!-- <section id="contact" class="py-20 px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Contact Me</h2>
+    <p class="text-slate-300 mb-6">Let’s build something amazing together!</p>
+    <div class="space-y-2">
+      <p>📧 <a href="mailto:yourname@email.com" class="text-indigo-300 hover:text-indigo-200">yourname@email.com</a></p>
+      <p>💬 <a href="https://wa.me/911234567890" class="text-green-400 hover:text-green-300">WhatsApp Me</a></p>
+    </div>
+  </section> -->
+
+  <section id="contact" class="py-20 px-6 text-center bg-gray-900 text-white">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">Contact Me</h2>
+  <p class="text-slate-300 mb-8">Let’s build something amazing together!</p>
+  
+  <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+    <!-- Email Button -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saksham.vibe17@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Saksham,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
+   target="_blank"
+   class="px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-lg transition">
+   📧 Email Me
+</a>
+
+
+    <!-- WhatsApp Button -->
+    <!-- <a href="https://wa.me/917011978602"
+       target="_blank"
+       class="px-6 py-3 rounded-2xl bg-green-600 hover:bg-green-500 text-white font-medium shadow-lg transition">
+       💬 WhatsApp Me
+    </a> -->
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-black/60 border-t border-white/10">
+    <p class="text-slate-400">© 2025 Saksham | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+    // Typing effect
+    const texts = ["Web Developer", "Frontend Designer" , "Saksham"]; let i = 0, j = 0, del = false; const el = document.getElementById('typing');
+    function type() { const t = texts[i]; el.textContent = t.slice(0, j); if (!del && j++ === t.length) { del = true; setTimeout(type, 1000); return; } if (del && --j === 0) { del = false; i = (i + 1) % texts.length; } setTimeout(type, del ? 70 : 120); } type();
+
+    // Spotlight follow effect for project cards
+    document.querySelectorAll('.spotlight').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--x', `${e.clientX - r.left}px`);
+        card.style.setProperty('--y', `${e.clientY - r.top}px`);
+      });
+    });
+  </script>
+</body>
+
+</html>
